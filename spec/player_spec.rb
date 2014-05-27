@@ -1,5 +1,5 @@
 require 'spec_helper'
-require_relative '../src/team.rb'
+require_relative '../src/player.rb'
 
-describe Team do
+describe Player do
 end
