@@ -11,6 +11,14 @@ class Team
 		
 		p = Player.new name, position
 
+		if !can_add_player p
+			RaiseError TypeError "Cannot add player at that position."
+		end
+
 		@players.push(p)
+	end
+	private
+	def can_add_player(player)
+		!@players.any? {|p| p.name == player.name && p.position == player.position}
 	end
 end
