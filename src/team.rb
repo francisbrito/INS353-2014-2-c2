@@ -10,6 +10,7 @@ class Team
 		@players ||= []
 		
 		p = Player.new name, position
-		@players.insert(position, p)
+
+		@players.push(p)
 	end
 end
