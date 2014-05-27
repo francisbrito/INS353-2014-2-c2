@@ -4,10 +4,10 @@ class Team
 	def initialize(name)
 		@name = name
 		@player_count = 0
+		@players = []
 	end
 	def add_player(name, position)
 		@player_count = @player_count + 1
-		@players ||= []
 		
 		p = Player.new name, position
 

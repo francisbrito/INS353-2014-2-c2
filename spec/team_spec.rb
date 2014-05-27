@@ -48,5 +48,10 @@ describe Team do
 
 			expect(t.player_count).to eql 0
 		end
+		it "Should throw if team is empty." do
+			t = Team.new 'Devils'
+
+			t.remove_player 'Angie'
+		end
 	end
 end
