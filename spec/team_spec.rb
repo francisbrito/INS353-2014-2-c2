@@ -8,5 +8,12 @@ describe Team do
 			
 			expect(t.name).to eql 'Devils'
 		end
+		it "Should allow team's name to be set." do
+			t = Team.new 'Devils'
+
+			t.name = 'Angels'
+
+			expect(t.name).to eql 'Angels'
+		end
 	end
 end
