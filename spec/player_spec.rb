@@ -16,4 +16,11 @@ describe Player do
 			expect(p.position).to eql 0
 		end
 	end
+	describe '#to_s' do
+		it "Should return player's name followed by position." do
+			p = Player.new 'Angie', 0
+
+			expect(p.to_s).to eql 'Angie - 0'
+		end
+	end
 end
