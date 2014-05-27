@@ -18,6 +18,10 @@ class Team
 		@players.push(p)
 	end
 	def remove_player(name)
+		# NOTE: No, I didn't copy it, it's just that `Array#delete_if` is the most obvious way to achieve this.
+		@players.delete_if {|p| p.name == name}
+
+		@player_count = @player_count - 1
 	end
 	private
 	def can_add_player(player)
