@@ -23,6 +23,14 @@ class Team
 
 		@player_count = @player_count - 1
 	end
+	def print_players()
+		puts to_s
+	end
+	def to_s()
+		s = @name + "\n"
+
+		@players.each {|p| s += p.to_s + "\n"}
+	end
 	private
 	def can_add_player(player)
 		!@players.any? {|p| p.name == player.name && p.position == player.position}

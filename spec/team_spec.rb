@@ -54,4 +54,14 @@ describe Team do
 			t.remove_player 'Angie'
 		end
 	end
+	describe 'Team#print_players' do
+		it "Should print a table of users" do
+			t = Team.new 'Devils'
+
+			t.add_player 'Angie', 0
+			t.add_player 'Becky', 1
+
+			# TODO: Assert this.	
+		end
+	end
 end
