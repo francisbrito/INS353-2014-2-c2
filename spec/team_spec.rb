@@ -16,4 +16,17 @@ describe Team do
 			expect(t.name).to eql 'Angels'
 		end
 	end
+	describe 'Team#add_player' do
+		it "Should add a player to the team" do
+			t = Team.new 'Devils'
+
+			t.add_player 'Angie', 0
+
+			expect(t.player_count).to eql 1
+
+			t.add_player 'Becky', 1
+
+			expect(t.player_count).to eql 2
+		end
+	end
 end
