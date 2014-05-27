@@ -38,4 +38,15 @@ describe Team do
 			expect {t.add_player 'Angie', 0}.to raise_error
 		end
 	end
+	describe 'Team#remove_player' do
+		it "Should remove a player from the team." do
+			t = Team.new 'Devils'
+
+			t.add_player 'Angie', 0
+
+			t.remove_player 'Angie'
+
+			expect(t.player_count).to eql 0
+		end
+	end
 end

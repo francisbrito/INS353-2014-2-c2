@@ -17,6 +17,8 @@ class Team
 
 		@players.push(p)
 	end
+	def remove_player(name)
+	end
 	private
 	def can_add_player(player)
 		!@players.any? {|p| p.name == player.name && p.position == player.position}
