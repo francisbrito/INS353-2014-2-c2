@@ -29,4 +29,13 @@ describe Team do
 			expect(t.player_count).to eql 2
 		end
 	end
+	describe 'Team#add_player' do
+		it "Should throw an error if player is already added." do
+			t = Team.new 'Devils'
+
+			t.add_player 'Angie', 0
+
+			expect {t.add_player 'Angie', 0}.to raise_error
+		end
+	end
 end
